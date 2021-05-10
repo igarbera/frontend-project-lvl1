@@ -6,3 +6,6 @@
 
 ### Github workflow:
 ![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+
+### Brain-even asciinema:
+https://asciinema.org/a/ImqFhpdOCzaqu7yqEWuj3Kqye
