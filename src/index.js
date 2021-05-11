@@ -17,7 +17,7 @@ export default (rule, gameFunc) => {
     const data = gameFunc();
 
     // выводим вопрос, сравниваем ответ юзера с корректным ответом, считаем победы до первой неудачи и выводим результат
-    console.log('Question: ', data.question);
+    console.log(`Question: ${data.question}`);
     const corrertAnswer = data.correctAnswer;
     const userAnswer = readlineSync.question('Your answer: ');
 
