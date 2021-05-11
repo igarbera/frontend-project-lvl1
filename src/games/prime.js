@@ -16,7 +16,7 @@ function isPrime(num) {
 
 // функция раунда игры
 const gameFunc = () => {
-  const a = Math.floor(Math.random() * 100);
+  const a = Math.floor(Math.random() * (500 - 2) + 2);
 
   // возвращаем обьект с вопросом и корректным ответом
   return {
