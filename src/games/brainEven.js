@@ -1,24 +1,17 @@
-import readlineSync from 'readline-sync';
-import getName from '../cli.js';
+import gameEngine from '../index.js';
 
-export default () => {
-  console.log('Welcome to the Brain Games!\n');
-  const name = getName();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".\n');
-  let successCount = 0;
+const rule = 'Answer "yes" if the number is even, otherwise answer "no".\n';
 
-  do {
-    const num = Math.floor(Math.random() * 100);
-    console.log('Question: ', num);
-    const corrertAnswer = (num % 2 === 0) ? 'yes' : 'no';
-    const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer === corrertAnswer) {
-      console.log('Correct!');
-      successCount += 1;
-    } else {
-      console.log(`\'${userAnswer}\' is wrong answer ;(. Correct answer was \'${corrertAnswer}\'.\n Let\'s try again, ${name}!`);
-      return;
-    }
-  } while (successCount < 3);
-  console.log(`Congratulations, ${name}!`);
+// функция раунда игры
+const gameFunc = () => {
+  const questionNum = Math.floor(Math.random() * 100); // рандомное число-вопрос
+  const corrertAnswer = (questionNum % 2 === 0) ? 'yes' : 'no'; // правильный ответ
+
+  // возвращаем обьект с вопросом и корректным ответом
+  return {
+    question: questionNum,
+    correctAnswer: corrertAnswer,
+  };
 };
+
+export default () => gameEngine(rule, gameFunc);

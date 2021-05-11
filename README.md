@@ -9,3 +9,6 @@
 
 ### Brain-even asciinema:
 https://asciinema.org/a/ImqFhpdOCzaqu7yqEWuj3Kqye
+
+### Brain-calc asciinema:
+https://asciinema.org/a/fcnCipzru2YfKaLgm0jMnW96N
