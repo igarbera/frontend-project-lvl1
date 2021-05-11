@@ -5,8 +5,8 @@ const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
 // определяем простое ли число
 function isPrime(num) {
   let flag = true;
-  for (let i = 2; i < num; i++) {
-    if (num % i == 0) {
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
       flag = false;
       break; // выйдем из цикла
     }

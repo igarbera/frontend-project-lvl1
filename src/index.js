@@ -16,16 +16,16 @@ export default (rule, gameFunc) => {
     // получаем correctAnswer и question из функции раунда  - gameFunc
     const data = gameFunc();
 
-    // выводим вопрос, сравниваем ответ юзера с корректным ответом, считаем победы до первой неудачи и выводим результат
     console.log(`Question: ${data.question}`);
     const corrertAnswer = data.correctAnswer;
     const userAnswer = readlineSync.question('Your answer: ');
 
+    // eslint-disable-next-line eqeqeq
     if (userAnswer == corrertAnswer) {
       console.log('Correct!');
       successCount += 1;
     } else {
-      console.log(`\'${userAnswer}\' is wrong answer ;(. Correct answer was \'${corrertAnswer}\'.\nLet\'s try again, ${name}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${corrertAnswer}'.\nLet's try again, ${name}!`);
       return;
     }
   } while (successCount < 3);
